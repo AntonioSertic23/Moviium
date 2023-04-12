@@ -1,44 +1,40 @@
 # Moviium
 
-# Angular10
+## Angular10
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
+---
 
-## Development server
+### Pokretanje projekta
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Prije pokretanja same aplikacije potrebno je pokrenuti API na sljedeći naćin:
 
-## Code scaffolding
+1. Otvoriti `Moviium.sln` u Visual Studiu
+2. Promjeniti putanje do baze podataka u `MovieContext.cs` i `appsettings.json`
+3. Pokreniti migracije na bazu podataka preko `Package Manager Console` gdje pokrećemo sljedeću liniju koda:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```sh
+update-database
+```
 
-## Build
+4. Te na kraju pokreniti sami API
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Nakon što smo pokrenuli api na red dolazi Angular projekt. Potrebno je
 
-## Running unit tests
+1. Otvoriti `angular10` datoteku u Visual Studio Code-u
+2. Kreirati vlastiti _api key_ na službenoj stranici **OMDb API-a**, potom dobiveni _api key_ zalijepiti u `src/app/omdb.service.ts` unutar:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+private apiURL = 'http://www.omdbapi.com/?apikey={api_key}&';
+```
 
-## Running end-to-end tests
+3. Pokrenuti komandu `npm install` i `ng serve` u terminalu
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```sh
+npm install
+```
 
-## Further help
+```sh
+ng serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-kako pokreniti...
-api
-
-1. otvoriti Moviium.sln u visual studiu
-2. promjeniti putanju do baze u fajlovima MovieContext.cs i appsettings.json
-3. pokrenit migracije update-database
-4. pokrenit api
-
-angular
-
-1. otvoriti angular10 u visual studio codu
-2. promjenit api key... u angular10\src\app\omdb.service.ts private apiURL = 'http://www.omdbapi.com/?apikey={api_key}&';
-3. npm install (a ak nece onda npm install --legacy-peer-deps) pa ng serve
-4. http://localhost:4200/login
+4. Potom se stranici može pristupiti na: [http://localhost:4200/login](http://localhost:4200/login)
