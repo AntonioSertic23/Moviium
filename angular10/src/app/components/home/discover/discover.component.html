@@ -1,5 +1,5 @@
 <div class="discover">
-  <div class="input-group mt-5 mb-4">
+  <div class="input-group mt-5 mb-4 search-bar">
     <input
       type="text"
       class="form-control"
@@ -112,21 +112,24 @@
           <p>{{ Movie.Runtime }}</p>
           <p>{{ Movie.Genre }}</p>
           <p>{{ Movie.imdbRating }} / 10</p>
-
           <p>{{ Movie.Plot }}</p>
-          <input
-            type="number"
-            min="0"
-            max="10"
-            class="form-control w-25"
-            [(ngModel)]="myrate"
-            placeholder="0"
-          />
+
+          <div>
+            <span>Ocjena: </span>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              class="form-control w-25"
+              [(ngModel)]="myrate"
+              placeholder="0"
+            />
+          </div>
           <button
             class="btn btn-success mt-4"
             (click)="addMovie(); modal.dismiss('Cross click')"
           >
-            +
+            Dodaj
           </button>
         </div>
       </div>
