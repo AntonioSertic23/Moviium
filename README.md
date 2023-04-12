@@ -40,5 +40,5 @@ angular
 
 1. otvoriti angular10 u visual studio codu
 2. promjenit api key... u angular10\src\app\omdb.service.ts private apiURL = 'http://www.omdbapi.com/?apikey={api_key}&';
-3. npm install pa ng serve
+3. npm install (a ak nece onda npm install --legacy-peer-deps) pa ng serve
 4. http://localhost:4200/login
