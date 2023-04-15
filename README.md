@@ -1,6 +1,6 @@
 # Moviium
 
-## Aplikacija za vođenje evidencije filmova
+## Web aplikacija za vođenje evidencije filmova
 
 Izrada stranice Moviium mi je bila dodjeljena kao prvi projekt nakon zaposlenja kako bi stekao znanja u radu sa Anularom i kreiranju API-ja.
 
