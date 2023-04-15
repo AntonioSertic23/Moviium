@@ -8,7 +8,7 @@ Tema projekta je bila napraviti kopiju prijašnje vlastite aplikacije sa faksa "
 
 Za izradu stranice korišten je **Angular** koji koristi **Bootstrap** za dizajn. Za izradu api-ja korišten je **ASP.NET Core Web API** koji koristi **Swagger** za prikaz kreiranih kontolera. Za bazu podataka korišten je **Microsoft SQL Server**.
 
-[![My Skills](https://skills.thijs.gg/icons?i=angular,bootstrap,visualstudio,cs,sqlite)](https://skills.thijs.gg)
+[![My Skills](https://skills.thijs.gg/icons?i=angular,bootstrap,dotnet,sqlite)](https://skills.thijs.gg)
 
 Aplikacija sadrži prijavu i registraciju uz potrebne provjere unesenih parametara, a za dohvaćanje filmova i njihovih podataka koristi se [OMDb API](https://www.omdbapi.com/).
 
