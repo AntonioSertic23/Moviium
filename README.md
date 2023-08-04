@@ -1,54 +1,54 @@
 # Moviium
 
-## Web aplikacija za vođenje evidencije filmova
+## Web application for managing movie records
 
-Izrada stranice Moviium mi je bila dodjeljena kao prvi projekt nakon zaposlenja kako bi stekao znanja u radu sa Anularom i kreiranju API-ja.
+The creation of the Moviium website was assigned to me as my first project after employment to gain knowledge in working with Angular and creating APIs.
 
-Tema projekta je bila napraviti kopiju prijašnje vlastite aplikacije sa faksa "Filmovi" samo u Angularu i sa pripadajućim api-jem za obradu podataka i komunikaciju sa bazom podataka.
+The project's theme was to make a copy of my previous custom application from college called [Movies](https://github.com/AntonioSertic23/Movies) but this time using Angular and a corresponding API for data processing and communication with the database.
 
-Za izradu stranice korišten je **Angular** koji koristi **Bootstrap** za dizajn. Za izradu api-ja korišten je **ASP.NET Core Web API** koji koristi **Swagger** za prikaz kreiranih kontolera. Za bazu podataka korišten je **Microsoft SQL Server**.
+The website was built using **Angular**, which utilizes **Bootstrap** for design. For creating the API, **ASP.NET Core Web API** was used, and **Swagger** was used to display the created controllers. The **Microsoft SQL Server** was used as the database.
 
 [![My Skills](https://skills.thijs.gg/icons?i=angular,bootstrap,dotnet,sqlite)](https://skills.thijs.gg)
 
-Aplikacija sadrži prijavu i registraciju uz potrebne provjere unesenih parametara, a za dohvaćanje filmova i njihovih podataka koristi se [OMDb API](https://www.omdbapi.com/).
+The application includes login and registration with necessary parameter checks. To fetch movies and their data, the [OMDb API](https://www.omdbapi.com/) is used.
 
 ---
 
-### Nakon uspješne prijave, u aplikaciji je moguće:
+### After successful login, the application allows you to:
 
-- pretražiti filmove po nazivu
-- pogledati detalje pojedinog filma
-- dodavanje filmova u svoju listu uz dodjelu vlastite ocjene
-- pogledati svoju listu filmova
-- ažurirati dodjeljene ocjene
-- uklanjanje filmova iz svoje liste
+- Search for movies by title
+- View details of a specific movie
+- Add movies to your own list along with a personal rating
+- View your list of movies
+- Update assigned ratings
+- Remove movies from your list
 
 ---
 
-### Pokretanje projekta
+### Running the project
 
-Prije pokretanja same aplikacije potrebno je pokrenuti API na sljedeći naćin:
+Before running the application itself, you need to start the API as follows:
 
-1. Otvoriti `Moviium.sln` u Visual Studiu
-2. Promjeniti putanje do baze podataka u `MovieContext.cs` i `appsettings.json`
-3. Pokreniti migracije na bazu podataka preko `Package Manager Console` gdje pokrećemo sljedeću liniju koda:
+1. Open `Moviium.sln` in Visual Studio
+2. Change the database paths in `MovieContext.cs` and `appsettings.json`
+3. Run migrations on the database via the `Package Manager Console` by executing the following line of code:
 
 ```sh
 update-database
 ```
 
-4. Te na kraju pokreniti sami API
+4. Finally, run the API itself
 
-Nakon što smo pokrenuli api na red dolazi Angular projekt. Potrebno je
+Once the API is running, it's time to start the Angular project. Follow these steps:
 
-1. Otvoriti `angular10` datoteku u Visual Studio Code-u
-2. Kreirati vlastiti _api key_ na službenoj stranici [OMDb API-a](https://www.omdbapi.com/), potom dobiveni _api key_ zalijepiti u `src/app/omdb.service.ts` unutar:
+1. Open the `angular10` folder in Visual Studio Code
+1. Create your own _api key_ on the official [OMDb API](https://www.omdbapi.com/) website, then paste the obtained _api key_ inside `src/app/omdb.service.ts` within the following line:
 
 ```sh
 private apiURL = 'http://www.omdbapi.com/?apikey={api_key}&';
 ```
 
-3. Pokrenuti komande `npm install` i `ng serve` u terminalu
+3. Execute the commands `npm install` and `ng serve` in the terminal
 
 ```sh
 npm install
@@ -58,4 +58,4 @@ npm install
 ng serve
 ```
 
-4. Potom se stranici može pristupiti na: [http://localhost:4200/login](http://localhost:4200/login)
+4. Access the website at: [http://localhost:4200/login](http://localhost:4200/login)
