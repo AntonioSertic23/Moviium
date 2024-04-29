@@ -8,7 +8,7 @@ The project's theme was to make a copy of my previous custom application from co
 
 The website was built using **Angular**, which utilizes **Bootstrap** for design. For creating the API, **ASP.NET Core Web API** was used, and **Swagger** was used to display the created controllers. The **Microsoft SQL Server** was used as the database.
 
-[![My Skills](https://skills.thijs.gg/icons?i=angular,bootstrap,dotnet,sqlite)](https://skills.thijs.gg)
+[![My Skills](https://skillicons.dev/icons?i=angular,bootstrap,dotnet,sqlite)](https://skillicons.dev)
 
 The application includes login and registration with necessary parameter checks. To fetch movies and their data, the [OMDb API](https://www.omdbapi.com/) is used.
 
